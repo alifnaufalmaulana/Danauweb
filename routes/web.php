@@ -10,7 +10,9 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\VisimisiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\StaffController as AdminStaffController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +58,9 @@ Route::get('/detailkegiatan/{id}', [KegiatanController::class, 'KegiatanShow'])-
 // Route::post('/komentar', [UserController::class, 'store'])->name('komentar.store');
 Route::post('/contact', [UserController::class, 'contactview'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'contactstore'])->name('contact.store');
+
+
+
 
 
 
@@ -118,14 +123,12 @@ Route::middleware([
     Route::delete('/deletevisimisi/{id}', [VisimisiController::class, 'destroy'])->name('visimisi.delete');
 
     //CRUD KARYAWAN
-    Route::get('/staff', [StaffController::class, 'index'])->name('staff.view');
-    Route::get('/staff_add', [StaffController::class, 'create'])->name('staff.add');
-    Route::post('/staff_store', [StaffController::class, 'store'])->name('staff.store');
-    Route::get('/staff_edit/{id}', [StaffController::class, 'edit'])->name('staff.edit');
-    Route::post('/staff_update/{id}', [StaffController::class, 'update'])->name('staff.update');
-    Route::delete('/deletestaff/{id}', [StaffController::class, 'destroy'])->name('staff.delete');
-
-
+    // Route::get('/staff', [AdminStaffController::class, 'index'])->name('staff.view');
+    // Route::get('/staff_add', [AdminStaffController::class, 'create'])->name('staff.add');
+    // Route::post('/staff_store', [AdminStaffController::class, 'store'])->name('staff.store');
+    // Route::get('/staff_edit/{id}', [AdminStaffController::class, 'edit'])->name('staff.edit');
+    // Route::post('/staff_update/{id}', [AdminStaffController::class, 'update'])->name('staff.update');
+    // Route::delete('/deletestaff/{id}', [AdminStaffController::class, 'destroy'])->name('staff.delete');
 
     Route::get('/aboutview', [AboutController::class, 'index'])->name('about.view');
     Route::get('/about_add', [AboutController::class, 'create'])->name('about.add');
@@ -137,6 +140,14 @@ Route::middleware([
 
     Route::get('/admin/contact', [ContactController::class, 'index'])->name('contact.view');
     Route::get('/admin/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
+
+
+    // Route::prefix('admin')->name('admin.')->group(function () {
+    //     Route::resource('staff', App\Http\Controllers\Admin\StaffController::class);
+    // });
+
+    // Route::get('/staff', [App\Http\Controllers\User\StaffController::class, 'index'])->name('user.staff.index');
+
 });
 
 
