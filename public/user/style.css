@@ -866,6 +866,9 @@ body{
     color: #777;
     line-height: 1.8;
 }
+.section-title img {
+    border-radius: 10px; /* Sesuaikan nilai border-radius sesuai keinginan untuk melengkungkan ujung gambar */
+}
 
 /*=============================
 	End Feautes CSS

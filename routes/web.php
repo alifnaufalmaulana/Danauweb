@@ -16,6 +16,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminTeamMemberController;
 
 /*
 |--------------------------------------------------------------------------
