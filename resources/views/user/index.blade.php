@@ -128,7 +128,7 @@
 											<img src="{{ asset('user/img/Group 139.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI KENDARAAN BERMOTOR</p>
+											<p>GADAI PERHIASAN</p>
 										</div>
 									</div>
 								</div>	
@@ -138,7 +138,7 @@
 											<img src="{{ asset('user/img/Group 140.png')}}" alt="Motorcycle Icon">
 										</div>
 										<div class="text-container">
-											<p>GADAI EMAS</p>
+											<p>GADAI MOBIL & MOTOR</p>
 										</div>
 									</div>
 								</div>
@@ -166,96 +166,42 @@
 			</section>
 		<!--/ End About singkat DEGJ -->
 
-		<!-- Start Promo -->
-		<section class="custom-pricing-table section">
-			<div class="container">
-				<div class="row">
-					@foreach ($promos as $promo)
-					<div class="col-md-6">
-						<div class="promo-text">
-							<h2>{{ $promo->temapromo }}</h2>
-							<p>{{ $promo->despromo }}</p>
-							<span class="link-text" onclick="window.location.href='https://www.instagram.com/danauemasid/'">Lihat Semua Promo</span>						
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="image-container">
-							<img src="{{ asset('storage/' . $promo->fotopromo) }}" alt="Right Image">
-						</div>
-					</div>	
-					@endforeach
-				</div>
-			</div>  
-		</section>		
-		<!--/ End Pricing Table -->				
-		<!--/ End Promo -->			
-		
-		<!-- Start foto kegiatan -->
-		<section class="portfolio section" >
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Aktivitas Kami Yang Dapat Anda Ketahui Secara Lengkap</h2>
-							{{-- <img src="{{ asset('user/img/coins.png')}}" alt="#">  --}}
-							<p>Simak berbagai kegiatan yang kami suguhkan untuk Anda disini</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 col-12">
-						<div class="owl-carousel portfolio-slider">
-							@foreach ($kegiatans as $kegiatan)
-							<div class="single-pf">
-								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#"> 
-								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">View Details</a>
-							</div>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</section>
-		<!--/ End foto kegiatan -->
-
 		<!-- Start Artikel Area -->
-		<section class="blog section" id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Artikel</h2>
-							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					@foreach ($beritas as $berita)
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Blog -->
-						<div class="single-news">
-							<div class="news-head">
-								<a href="{{ route('user.detailberita', $berita->id) }}">
-								<img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
-								</a>
-							</div>
-							<div class="news-body">
-								<div class="news-content">
-									<div class="date">{{ $berita->tanggal }}</div>
-									<h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
-									<p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					@endforeach
-				</div>
-			</div>
-		</section>
-		<!-- End Artikel Area-->
+<section class="blog section" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Artikel</h2>
+                    <p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach ($beritas as $berita)
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <a href="{{ route('user.detailberita', $berita->id) }}">
+                            <img src="{{ asset('storage/' . $berita->fotoberita) }}" alt="#">
+                        </a>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-content">
+                            <div class="date">{{ $berita->tanggal }}</div>
+                            <h2><a href="{{ route('user.detailberita', $berita->id) }}">{{ $berita->judulberita }}</a></h2>
+                            <p class="text">{{ Str::limit($berita->deskripsi, 116) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- End Artikel Area-->
+
 
 		<!-- Promo -->
 		<section class="custom-pricing-table section">
@@ -341,7 +287,7 @@
 							</div>
 							<div class="unit">
 								<div class="card-unit">
-									<img src="{{ asset('user/img/unit3.jpeg') }}" class="card-img-left" alt="Unit Tuban Gajahmada">
+									<img src="{{ asset('user/img/unit13.jpeg') }}" class="card-img-left" alt="Unit Tuban Gajahmada">
 									<div class="card-body">
 										<h3 class="card-title">Tuban Gajahmada</h3>
 										<p class="card-text">Jl. Gajahmada No.25, Kebonsari, Tuban, Jawa Timur <a href="https://www.example.com" class="btn">Lihat Google Maps<i class="fas fa-map-marker-alt"></i></a></p>
@@ -418,81 +364,142 @@
 		<!-- End unit -->
 
 		<!-- Start dokumentasi kegiatan -->
-		<section class="portfolio section" >
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>Dokumentasi Kegiatan</h2>
-							<h2>Danau Emas Gadai Jatim</h2>
-							{{-- <img src="user/img/section-img.png" alt="#"> --}}
-							<p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 col-12">
-						<div class="owl-carousel portfolio-slider">
-							@foreach ($kegiatans as $kegiatan)
-							<div class="single-pf">
-								<img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
-								<a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
-							</div>
-							@endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Unit DEGJ -->
+<section class="portfolio section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Dokumentasi Kegiatan</h2>
+                    <h2>Danau Emas Gadai Jatim</h2>
+                    {{-- <img src="user/img/section-img.png" alt="#"> --}}
+                    <p>Kami menyajikan rangkaian momen berharga dari berbagai kegiatan dan program yang telah kami lakukan. Setiap foto adalah bukti nyata komitmen kami dalam memberikan layanan terbaik dan kontribusi positif bagi masyarakat Jawa Timur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="owl-carousel portfolio-slider">
+                    @foreach ($kegiatans as $kegiatan)
+                    <div class="single-pf">
+                        <img src="{{ asset('storage/' . $kegiatan->potokegiatan1) }}" alt="#">
+                        {{-- <div class="btn-container"> --}}
+                            <a href="{{ route('user.detailkegiatan', $kegiatan->id) }}" class="btn">Lihat Detail</a>
+                        {{-- </div> --}}
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End dokumentasi kegiatan -->
 
-			
-		<!-- Start Our Staff Area -->
-		<section class="our-team section" id="our-team">
+
+
+
+		<!-- Start layanan -->
+		<section class="services section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Our Staff</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<h2>Layanan Tambahan</h2>
+							{{-- <img src="{{ asset('user/img/section-img.png')}}" alt="#"> --}}
+							<p>Terdapat 3 layanan yang disediakan oleh Danau Emas Gadai Jatim.</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Team Member -->
-						<div class="single-member">
-							<div class="member-img">
-								<img src="{{ asset('user/img/person.jpg')}}" alt="#">
-								<div class="social-icons">
-									<a href="#"><i class="fa fa-instagram"></i></a>
-									<a href="#"><i class="fa fa-whatsapp"></i></a>
-									<a href="#"><i class="fa fa-linkedin"></i></a>
-								</div>
-							</div>
-							<div class="member-details">
-								<h2>Name</h2>
-								<p>CEO & Founder</p>
-							</div>
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-motor-biker"></i>
+							<h4><a href="#">Jemput Gadai</a></h4>
+							<p>Danau Emas Gadai Jatim kini hadir dengan Layanan Jemput Gadai! Tak perlu repot 
+								datang ke kantor, petugas kami siap menjemput barang gadai Anda di lokasi. 
+								Proses cepat, aman, dan transparan. Solusi praktis untuk kebutuhan dana cepat 
+								Anda. Hubungi DEGJ sekarang!
+							</p>	
 						</div>
-						<!-- End Single Team Member -->
+						<!-- End Single Service -->
 					</div>
-					<!-- Add more team members here -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-washing-machine"></i>
+							<h4><a href="#">Cuci Emas Gratis</a></h4>
+							<p>Kembalikan kilau emas Anda dengan Layanan Cuci Emas Gratis di Danau Emas Gadai Jatim! 
+								Nikmati perhiasan yang bersih dan berkilau tanpa biaya tambahan. Kunjungi DEGJ terdekat 
+								dan percayakan perawatan emas Anda pada ahlinya. Segera manfaatkan layanan ini untuk 
+								perhiasan yang selalu tampak baru!
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-gift"></i>
+							<h4><a href="#">Hadiah Spesial</a></h4>
+							<p>Nikmati hadiah menarik di Danau Emas Gadai Jatim! Gadaikan emas Anda 
+								dan menangkan barang elektronik, peralatan rumah tangga, dan uang tunai. 
+								Setiap transaksi berpeluang menang! Kunjungi sekarang dan dapatkan hadiahnya!
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Our Staff Area -->
+		<!--/ End Layanan -->
 
-		<!-- Start sponsor -->
-		<div class="clients overlay">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-12">
-						<div class="owl-carousel clients-slider">
-							<div class="single-clients">
-								<img src="{{ asset('user/img/client10.png')}}" alt="#"> 
+		<!-- Start Our Team Area -->
+	{{-- <section class="our-team section" id="our-team">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>Tim Kami</h2>
+						<p>Di Danau Emas Gadai Jatim, kami bangga memiliki tim yang berdedikasi dan profesional untuk melayani Anda dengan sepenuh hati!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- Slider Container -->
+					<div class="slider-container">
+						<div class="slider tim-kami">
+							<!-- Single Team Member -->
+							<div class="single-member">
+								<div class="member-img">
+									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+									<div class="social-icons">
+										<a href="#"><i class="fa fa-instagram"></i></a>
+										<a href="#"><i class="fa fa-whatsapp"></i></a>
+										<a href="#"><i class="fa fa-linkedin"></i></a>
+									</div>
+								</div>
+								<div class="member-details">
+									<h4>Moh. Ananta</h4>
+									<p>CEO & Founder</p>
+								</div>
+							</div>
+							<!-- Repeat for other team members -->
+							<div class="single-member">
+								<div class="member-img">
+									<img src="{{ asset('user/img/person.jpg')}}" alt="#">
+									<div class="social-icons">
+										<a href="#"><i class="fa fa-instagram"></i></a>
+										<a href="#"><i class="fa fa-whatsapp"></i></a>
+										<a href="#"><i class="fa fa-linkedin"></i></a>
+									</div>
+								</div>
+								<div class="member-details">
+									<h4>Name 2</h4>
+									<p>CTO</p>
+								</div>
 							</div>
 							<div class="single-member">
 								<div class="member-img">
@@ -514,27 +521,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- End Our Team Area -->
 	<!-- Include jQuery Our Team Area-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- Custom Slider Script -->
-	<script>
-	$(document).ready(function(){
-		const slider = $('.tim-kami');
-		const members = $('.single-member');
-		const memberCount = members.length;
-		let currentIndex = 0;
-
-		function showNextMember() {
-			currentIndex = (currentIndex + 1) % memberCount;
-			const translateXValue = -currentIndex * 100;
-			slider.css('transform', `translateX(${translateXValue}%)`);
-		}
-
-		setInterval(showNextMember, 3000); // Change member every 3 seconds
-	});
-</script>
+	
 		
 		<!-- Start Kotak Saran -->
 		<section class="appointment">
