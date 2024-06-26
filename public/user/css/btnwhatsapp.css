@@ -1,6 +1,7 @@
 #waButton {
     position: fixed;
-    bottom: 10px;
+    /* bottom: 10px; */
+    bottom: 15px;
     right: 15px;
     background-color: #FEE315;
     border: none;
@@ -40,7 +41,8 @@
 .popup {
     display: none;
     position: fixed;
-    bottom: 70px;
+    /* bottom: 70px; */
+    bottom: 85px;
     right: 20px;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);

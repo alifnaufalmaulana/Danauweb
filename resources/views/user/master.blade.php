@@ -37,8 +37,10 @@
         <link rel="stylesheet" href="{{ asset('user/css/magnific-popup.css')}}">
 		{{-- BtnWhatsApp --}}
 		<link rel="stylesheet" href="{{ asset('user/css/btnwhatsapp.css')}}">
+
 		<!-- Include Bootstrap Icons CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+
 		
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="{{ asset('user/css/normalize.css')}}">  
@@ -82,7 +84,7 @@
 		</ul>  --}}
 		<!-- Header Area -->
 		<header class="header" >
-			<!-- Topbar -->
+			{{-- <!-- Topbar -->
 			<div class="topbar">
 				<div class="container">
 					<div class="row">
@@ -91,9 +93,12 @@
 							{{-- <ul class="top-link">
 								<li><a href="{{ route('user.about') }}">About</a></li> --}}
 								{{-- <li><a href="#">Berita</a></li> --}}
+
 								{{-- <li><a href="{{ route ('user.contact')}}">Contact</a></li>
-								<li><a href="{{ route('user.faq') }}">FAQ</a></li>
-							</ul> --}}
+
+								{{-- <li><a href="">Contact</a></li>
+
+							
 							<!-- End Contact -->
 						</div>
 						<div class="col-lg-6 col-md-7 col-12">
@@ -102,7 +107,7 @@
 								<li><i class="fa fa-phone"></i><a href="https://api.whatsapp.com/send?phone=6281357769681" target="_blank">+62 Nomor di ganti</a></li>
 								<li><i class="fa fa-envelope"></i><a href="mailto: pt.danauemasgadaijatim@gmail.com" >Danau Emas Gadai Jatim</a></li>
 							</ul>
-							<!-- End Top Contact -->
+							<!-- End Top Contact --> --}} 
 						</div>
 					</div>
 				</div>
@@ -128,17 +133,21 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li><a href="/">Home</a>  
+											<li><a href="/">Beranda</a>  
 												{{-- class="active" --}}
 											</li>
-											<li><a href="{{ route('user.about')}}">About</a></li>
+
+											<li><a href="{{ route('user.about')}}">Tentang Kami</a></li>
 											<li><a href="{{ route('user.berita')}}">Artikel</a></li>											
-											<li><a href="#">Our Team<i class="icofont-rounded-down"></i></a>
+											<li><a href="#">Tim Kami<i class="icofont-rounded-down"></i></a>
+
 												<ul class="dropdown">
-													<li><a href="{{ route('user.team')}}">Team all</a></li>
+													<li><a href="{{ route('user.team')}}">Tim Keseluruhan</a></li>
 												</ul>
 											</li>
-											<li><a href="{{ route('user.contact')}}">Contact Us</a></li>
+
+											<li><a href="{{ route('user.contact')}}">Hubungi Kami</a></li>
+
 										</ul>
 									</nav>
 								</div>
@@ -158,9 +167,8 @@
 		<!-- End Header Area -->
 
 		<button id="waButton">
-			<i class="bi bi-whatsapp" style="font-size: 30px;"></i>
-			
-			{{-- <img id="buttonIcon" src="{{ asset('user/img/wa.png')}}" alt="WhatsApp" width="30" height="30"> --}}
+			{{-- <i class="bi bi-whatsapp" style="font-size: 30px;"></i> --}}
+			<img id="buttonIcon" src="{{ asset('user/img/wa.png')}}" alt="WhatsApp" width="30" height="30">
 		</button>
 	
 		<div id="popup" class="popup">
@@ -244,6 +252,13 @@
 		@if(@session('success'))
 		<div class="alert alert-success">{{ session('success') }}</div>
 		@endif
+
+		{{-- @if(session('success'))
+		<div class="alert alert-success">
+			{{ session('success') }}
+		</div>
+		@endif	 --}}
+
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
@@ -253,35 +268,46 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<h2>About Us</h2>
-								<p>PT Danau Emas Gadai Emas Jatim, pegadaian terpercaya di bawah naungan INKOPPOL dan OJK, siap membantu Anda mengatasi masalah keuangan dengan proses gadai yang cepat, aman, dan mudah. Tak perlu khawatir, Danau Emas adalah solusi cerdas untuk masalah keuangan Anda. Urusan gadai cepat dan mudah, masalah keuangan pun teratasi.</p>
+								<h2>Tentang Kami</h2>
+								<p>Danau Emas merupakan pegadaian dibawah naungan INKOPPOL dan OJK yang hadir untuk membantu masyarakat dalam menghadapi masalah keuangan dengan cara mudah, aman dan cepat.</p>
 								<!-- Social -->
-								<ul class="social">
-									<li><a href="#"><i class="icofont-facebook"></i></a></li>
-									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
-									<li><a href="#"><i class="icofont-twitter"></i></a></li>
-									<li><a href="#"><i class="icofont-vimeo"></i></a></li>
-									<li><a href="#"><i class="icofont-pinterest"></i></a></li>
-								</ul>
-								<!-- End Social -->
+<ul class="social">
+    <li><a href="mailto:pt.danauemasgadaijatim@gmail.com" class="social-link"><img src="{{ asset('user/img/sosmed-01.png') }}" alt="TikTok"></a></li>
+    <li><a href="https://www.instagram.com/danauemasid/" class="social-link"><img src="{{ asset('user/img/sosmed-04.png') }}" alt="TikTok"></a></li>
+    <li><a href="https://www.facebook.com/share/z2aH3SsSzZw3ps6M/?mibextid=qi2Omg" class="social-link"><img src="{{ asset('user/img/sosmed-02.png') }}" alt="TikTok"></a></li>
+    <li><a href="https://www.tiktok.com/@danauemasbanyuwangi" class="social-link"><img src="{{ asset('user/img/sosmed-03.png') }}" alt="TikTok"></a></li>
+</ul>
+<!-- End Social -->
+
+
+
+
+
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer f-link">
-								<h2>Quick Links</h2>
+								<h2>Tautan Cepat</h2>
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-											{{-- <li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li> --}}
-											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a></li>
+											{{-- <li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a></li> --}}
+
+											<li><a href="{{ route('user.index')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Beranda</a></li>
+											{{-- <li><a href="{{ route('user.about')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Tentang Kami</a></li> --}}
+											<li><a href="{{ route('user.berita')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Artikel</a></li>
 										</ul>
 									</div>
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="{{route('user.team')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Team</a></li>
+											{{-- <li><a href="{{route('user.team')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Team</a></li>
 											<li><a href="{{route('user.contact')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
-											<li><a href="{{route('user.faq')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+											<li><a href="{{route('user.faq')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li> --}}
+
+											<li><a href="{{route('user.team')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Tim Kami</a></li>
+											<li><a href="{{route('user.contact')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>Hubungi Kami</a></li>
 										</ul>
 									</div>
 								</div>
@@ -289,18 +315,27 @@
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<h2>Open Hours</h2>
-								<p>Kami siap melayani anda pada pukul:</p>
+								<h2>Jam Buka</h2>
+								<p>Berikut adalah jam layanan PT. Danau Emas Gadai Jatim :</p>
 								<ul class="time-sidual">
-									<li class="day">Senin - Jumat <span>08.00-17.00</span></li>
-									<li class="day">Sabtu <span>08.00-13.00</span></li>
-									<li class="day">Minggu & Hari Besar<span>Libur<span></li>
+									<li class="day">Senin - Jum'at <span>8.00-17.00</span></li>
+									<li class="day">Sabtu <span>8.00-13.00</span></li>
+									<li class="day"><strong>Minggu & Hari Besar</strong><span><strong>Libur</span></strong></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<img style="margin-right: 10px" src="{{ asset('user/img/ojk.png')}}"></img>
+								{{-- <img style="margin-right: 10px" src="{{ asset('user/img/ojk.png')}}"></img> --}}
+
+								<img style="margin-right: 20px" src="{{ asset('user/img/imgfooter-02.png')}}"></img>
+								{{-- <h2>Informasi</h2>
+								<p>Induk Koperasi Kepolisian Negara Republik Indonesia (INKOPPOL ) adalah Koperasi Sekunder Tingkat Nasional yang bergerak dibidang perdagangan dan pengembangan jasa umum, yang berada di ibukota Negara Republik Indonesia di Jakarta, yang berdiri sejak 5 Desember 1968, yang diawali dengan nama Induk Koperasi Angkatan Kepolisian ( INKOPAK ).</p> --}}
+								{{-- <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Your email address'" required="" type="email">
+									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								</form> --}}
 							</div>
 						</div>
 					</div>
@@ -313,7 +348,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+								<p>© Copyright 2024 | PT. Danau Emas Gadai Jatim</p>
 							</div>
 						</div>
 					</div>
@@ -368,7 +403,9 @@
 		{{-- BtnWhatsApp --}}
 		<script src="{{ asset('user/js/btnwhatsapp.js')}}"></script>
 		<script>
-				$(document).ready(function(){
+
+			$(document).ready(function(){
+
 					$(".unit-slider").owlCarousel({
 						loop: true,
 						margin: 10,
@@ -388,5 +425,6 @@
 					});
 				});
 		</script>
+
     </body>
 </html>

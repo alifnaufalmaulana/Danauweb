@@ -1,7 +1,7 @@
 @extends('user.master')
 @section('user')
 		<!-- Breadcrumbs -->
-		<div class="breadcrumbs overlay">
+		{{-- <div class="breadcrumbs overlay">
 			<div class="container">
 				<div class="bread-inner">
 					<div class="row">
@@ -16,7 +16,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!-- End Breadcrumbs -->
 
         		<!-- Start Blog Area -->
@@ -25,9 +25,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Keep up with Our Most Recent Medical News.</h2>
-							<img src="{{ asset('user/img/section-img.png')}}" alt="#"> 
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<h2>Artikel Danau Emas Gadai Jatim</h2>
+							<p>Yuk ikuti informasi terbaru kami, melalui artikel di bawah ini!</p>
 						</div>
 					</div>
 				</div>

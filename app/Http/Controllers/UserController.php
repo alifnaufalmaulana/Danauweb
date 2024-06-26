@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use App\Models\About;
 use Illuminate\Support\Facades\Session;
 use App\Models\Berita;
@@ -50,7 +51,8 @@ class UserController extends Controller
 
     public function teamview()
     {
-        return view('user.team');
+        $teams = Team::all();
+        return view('user.team', compact('teams'));
     }
 
     public function contactview()
@@ -137,4 +139,19 @@ class UserController extends Controller
         Session::flash('success', 'Pesan telah berhasil terkirim!');
         return redirect()->route('user.contact');
     }
+
+// Expand vendor frames
+// C:\xampp\htdocs\Danauweb\resources\views\user\team.blade
+// .php
+//  
+// : 13
+// require
+// 54 vendor frames
+// C:\xampp\htdocs\Danauweb\public\index
+// .php
+//  
+// : 51
+// require_once
+// 1 vendor frame return redirect()->route('user.contact');
+//     }
 }
